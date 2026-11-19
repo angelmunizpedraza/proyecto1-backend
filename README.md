@@ -76,8 +76,8 @@ API REST hecha con **Node.js, Express y MongoDB Atlas**. Los usuarios se registr
 git clone https://github.com/angelmunizpedraza/proyecto1-backend.git
 cd proyecto1-backend
 npm install
-npm run seed   # carga los videojuegos
 npm run dev    # arranca en http://localhost:3000 y se reinicia al guardar cambios
+npm run seed   # opcional: los juegos ya están cargados en la base de datos del .env
 ```
 
 | Script | Qué hace |
@@ -109,6 +109,18 @@ El archivo `.env` está en la raíz y se carga con `process.loadEnvFile()`, que 
 ---
 
 ## 👑 Crear el primer administrador
+
+### Cuenta de admin de prueba (ya creada)
+
+Para corregir sin tocar Atlas, la base de datos del `.env` ya tiene los 15 juegos de la semilla y este administrador:
+
+| Email | Contraseña | Rol |
+|---|---|---|
+| `admin@proyecto1.com` | `nVOcSPv5T-Qt` | `admin` |
+
+Se creó con el registro normal (como `user`) y después se le cambió el rol a mano en Atlas, tal como pide el enunciado.
+
+### Cómo se crea un admin desde cero
 
 Todos los usuarios se registran como `user`. El primer admin se crea a mano:
 
